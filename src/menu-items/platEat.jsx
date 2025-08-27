@@ -19,24 +19,21 @@ const platEat = {
       title: 'user',
       type: 'item',
       url: '/platEat/user',
-      icon: icons.CopyOutlined,
-      target: true
+      icon: icons.CopyOutlined
     },
     {
       id: 'restaurant',
       title: 'restaurant',
       type: 'item',
       url: '/platEat/restaurant',
-      icon: icons.CopyOutlined,
-      target: true
+      icon: icons.CopyOutlined
     },
     {
       id: 'video',
       title: 'video',
       type: 'item',
       url: '/platEat/video',
-      icon: icons.YoutubeOutlined,
-      target: true
+      icon: icons.YoutubeOutlined
     }
   ]
 };
