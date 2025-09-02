@@ -8,7 +8,8 @@ const VideoRegister = () => {
   const [group, setGroup] = useState('');
   const [season, setSeason] = useState('');
   const [videos, setVideos] = useState([{ order: 1, title: '', youtubeId: '' }]);
-
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const navigate = useNavigate();
   const handleAddRow = () => {
     const nextOrder = videos.length > 0 ? videos[videos.length - 1].order + 1 : 1;
     setVideos([...videos, { order: nextOrder, title: '', youtubeId: '' }]);
@@ -38,9 +39,8 @@ const VideoRegister = () => {
         }))
       };
 
-      const res = await axios.post('http://localhost:3001/video', payload);
-
-      navigate('-1');
+      const res = await axios.post(`${apiUrl}/video`, payload);
+      navigate('/platEat/video');
     } catch (error) {
       console.error('저장 실패:', error);
       alert('저장 실패');

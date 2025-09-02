@@ -15,10 +15,12 @@ const Shadow = Loadable(lazy(() => import('pages/component-overview/shadows')));
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
 
-const Restaurant = Loadable(lazy(() => import('pages/platEat/Restaurant')));
-const User = Loadable(lazy(() => import('pages/platEat/User')));
-const Video = Loadable(lazy(() => import('pages/platEat/Video')));
-const VideoRegister = Loadable(lazy(() => import('pages/platEat/VideoRegister')));
+const Reservation = Loadable(lazy(() => import('pages/platEat/reservation/Reservation')));
+const User = Loadable(lazy(() => import('pages/platEat/user/User')));
+const UserDetail = Loadable(lazy(() => import('pages/platEat/user/UserDetail')));
+const Video = Loadable(lazy(() => import('pages/platEat/video/Video')));
+const VideoRegister = Loadable(lazy(() => import('pages/platEat/video/VideoRegister')));
+const VideoDetail = Loadable(lazy(() => import('pages/platEat/video/VideoDetail')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -66,17 +68,21 @@ const MainRoutes = {
           path: 'videoRegister',
           element: <VideoRegister />
         },
-        // {
-        //   path: 'video/:id',
-        //   element: <VideoDetail />
-        // },
+        {
+          path: 'videoDetail/:id',
+          element: <VideoDetail />
+        },
         {
           path: 'user',
           element: <User />
         },
         {
-          path: 'restaurant',
-          element: <Restaurant />
+          path: 'userDetail',
+          element: <UserDetail />
+        },
+        {
+          path: 'reservation',
+          element: <Reservation />
         }
       ]
     }

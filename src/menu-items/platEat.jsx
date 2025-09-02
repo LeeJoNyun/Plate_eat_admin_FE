@@ -22,10 +22,10 @@ const platEat = {
       icon: icons.CopyOutlined
     },
     {
-      id: 'restaurant',
-      title: 'restaurant',
+      id: 'reservation',
+      title: 'reservation',
       type: 'item',
-      url: '/platEat/restaurant',
+      url: '/platEat/reservation',
       icon: icons.CopyOutlined
     },
     {
